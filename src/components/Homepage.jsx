@@ -3,12 +3,12 @@ import EmployeeList from './EmployeeList';
 import Header from './Header';
 import SearchBar from './SearchBar';
 
-const Homepage = ({ employees, setCurrent }) => {
+const Homepage = ({}) => {
   return (
     <div>
       <Header title={'Employee Directory'} />
       <SearchBar />
-      <EmployeeList setCurrent={setCurrent} employees={employees} />
+      <EmployeeList />
     </div>
   );
 };

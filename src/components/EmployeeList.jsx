@@ -1,8 +1,13 @@
 import EmployeeListItem from './EmployeeListItem';
+import { useContext } from 'react';
+import { EmployeeContext } from '../contexts/app_context';
 
-const EmployeeList = ({ employees, setCurrent }) => {
+const EmployeeList = ({}) => {
+  const { employees } = useContext(EmployeeContext);
 
-  const list = employees.map((employee, i) => <EmployeeListItem setCurrent={setCurrent} key={i} employee={employee} />);
+  const list = employees.map((employee, i) => (
+    <EmployeeListItem key={i} employee={employee} />
+  ));
 
   return <ul>{list}</ul>;
 };

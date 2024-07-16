@@ -1,15 +1,22 @@
 //React Components
 import Header from './Header';
+import { useContext } from 'react';
+import { EmployeeContext } from '../contexts/app_context';
 
-const EmployeePage = ({ current }) => {
+const EmployeePage = () => {
+  const { current } = useContext(EmployeeContext);
+
   const { firstName, lastName, jobTitle, officeNum, mobileNum, SMS, email } =
     current;
+
   return (
     <div>
       <Header title={'Employee'} />
       <div>
         <div>
-          <h3>{firstName} {lastName}</h3>
+          <h3>
+            {firstName} {lastName}
+          </h3>
           <h4>{jobTitle}</h4>
         </div>
         <div>

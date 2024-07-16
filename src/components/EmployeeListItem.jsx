@@ -1,4 +1,9 @@
-const EmployeeListItem = ({ i, employee, setCurrent }) => {
+import { useContext } from 'react';
+import { EmployeeContext } from '../contexts/app_context';
+
+const EmployeeListItem = ({ i, employee }) => {
+  const { setCurrent } = useContext(EmployeeContext);
+
   let { firstName, lastName, jobTitle } = employee;
 
   function handleClick() {
